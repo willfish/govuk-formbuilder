@@ -33,3 +33,8 @@ code-climate:
 	codeclimate analyze {lib,spec,guide/lib}
 clean:
 	rm -rf guide/output/**/*
+
+# the tasks below are experimental and will only work on my computer
+
+run-apply-specs:
+	./spec/scripts/apply.sh
