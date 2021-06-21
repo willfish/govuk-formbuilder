@@ -5,6 +5,7 @@ describe GOVUKDesignSystemFormBuilder::FormBuilder do
     let(:method) { :govuk_submit }
     let(:text) { 'Create' }
     let(:args) { [method] }
+    let(:kwargs) { {} }
     subject { builder.send(method, text) }
 
     include_examples 'HTML formatting checks'
@@ -77,6 +78,15 @@ describe GOVUKDesignSystemFormBuilder::FormBuilder do
         specify 'button should have the custom class' do
           expect(subject).to have_tag('input', with: { class: %w(govuk-button custom-class--one custom-class--two) })
         end
+      end
+    end
+
+    describe 'rendering a button element instead of an input' do
+      let(:kwargs) { { button: true } }
+      subject { builder.send(*args, **kwargs) }
+
+      specify "renders a button element" do
+        expect(subject).to have_tag('button')
       end
     end
 

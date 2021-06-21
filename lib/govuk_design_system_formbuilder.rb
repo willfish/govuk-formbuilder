@@ -70,6 +70,7 @@ module GOVUKDesignSystemFormBuilder
     default_collection_check_boxes_include_hidden: true,
     default_collection_radio_buttons_include_hidden: true,
     default_submit_validate: false,
+    default_submit_button_element: false,
 
     localisation_schema_fallback: %i(helpers __context__),
     localisation_schema_label: nil,

@@ -4,7 +4,7 @@ module GOVUKDesignSystemFormBuilder
       using PrefixableArray
       include Traits::HTMLAttributes
 
-      def initialize(builder, text, warning:, secondary:, classes:, prevent_double_click:, validate:, disabled:, **kwargs, &block)
+      def initialize(builder, text, warning:, secondary:, classes:, prevent_double_click:, validate:, disabled:, button:, **kwargs, &block)
         super(builder, nil, nil)
 
         fail ArgumentError, 'buttons can be warning or secondary' if warning && secondary
@@ -16,6 +16,7 @@ module GOVUKDesignSystemFormBuilder
         @classes              = classes
         @validate             = validate
         @disabled             = disabled
+        @button               = button
         @html_attributes      = kwargs
         @block_content        = capture { block.call } if block_given?
       end
@@ -35,7 +36,15 @@ module GOVUKDesignSystemFormBuilder
       end
 
       def submit
+        @button ? button_element : input_element
+      end
+
+      def input_element
         @builder.submit(@text, **attributes(@html_attributes))
+      end
+
+      def button_element
+        tag.button(@text, **attributes(@html_attributes))
       end
 
       def options
