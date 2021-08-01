@@ -128,6 +128,23 @@ To help keep the logs clean and tidy, please configure git to use your full name
 git config --global user.name "Julius Hibbert"
 ```
 
+## Services using this library
+
+Approximately [40 services use the GOV.UK form builder](https://github.com/DFE-Digital/govuk-formbuilder/network/dependents),
+here are a few from the Department for Education; the Ministry of Justice; the
+Department for International Trade; and the Department for Business, Energy & Industrial Strategy.
+
+ * [Apply for teacher training](https://www.gov.uk/apply-for-teacher-training) [:octocat:](https://www.github.com/DFE-Digital/apply-for-teacher-training)
+ * [Teaching Vacancies](https://teaching-vacancies.service.gov.uk/) [:octocat:](https://www.github.com/DFE-Digital/teaching-vacancies)
+ * [Get Into Teaching](https://getintoteaching.education.gov.uk/) [:octocat:](https://www.github.com/DFE-Digital/get-into-teaching-app)
+ * [Get a teacher training adviser](https://adviser-getintoteaching.education.gov.uk/) [:octocat:](https://www.github.com/DFE-Digital/get-teacher-training-adviser-service/)
+ * [Claim for crown court defence](https://claim-crown-court-defence.service.gov.uk/) [:octocat:](https://www.github.com/ministryofjustice/Claim-for-Crown-Court-Defence)
+ * [Appeal to the tax tribunal](https://www.gov.uk/tax-tribunal/appeal-to-tribunal) [:octocat:](https://www.github.com/ministryofjustice/tax-tribunals-datacapture)
+ * [Apply to court about child arrangements](https://apply-to-court-about-child-arrangements.service.justice.gov.uk/) [:octocat:](https://www.github.com/ministryofjustice/c100-application)
+ * [Trade Tariff duty calculator](https://www.gov.uk/trade-tariff) [:octocat:](https://www.github.com/trade-tariff/trade-tariff-duty-calculator)
+ * Peoplefinder [:octocat:](https://www.github.com/uktrade/peoplefinder)
+ * [Report your official development assistance](https://www.report-official-development-assistance.service.gov.uk/) [:octocat:](https://www.github.com/UKGovernmentBEIS/beis-report-official-development-assistance)
+
 ## Thanks 👩🏽‍⚖️
 
 This project was inspired by [Ministry of Justice's GovukElementsFormBuilder](https://github.com/ministryofjustice/govuk_elements_form_builder),
